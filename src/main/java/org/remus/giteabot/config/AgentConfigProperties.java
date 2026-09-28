@@ -42,6 +42,17 @@ public class AgentConfigProperties {
     private int maxFileContentChars = 100000;
 
     /**
+     * Whether to log complete tool execution results for diagnostics.
+     * Disabled by default because tool output may contain repository or secret data.
+     */
+    private boolean logToolResults = false;
+
+    /**
+     * Maximum characters of a single tool result written to the application log.
+     */
+    private int logToolResultMaxChars = 50_000;
+
+    /**
      * Validation settings.
      */
     private ValidationConfig validation = new ValidationConfig();
